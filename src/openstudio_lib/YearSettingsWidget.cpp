@@ -108,7 +108,7 @@ YearSettingsWidget::YearSettingsWidget(const model::Model& model, QWidget* paren
   connect(m_firstDayOfYearButton, &QRadioButton::clicked, this, &YearSettingsWidget::onFirstDayofYearClicked);
   m_firstDayOfYearEdit = new OSComboBox2();
   std::vector<std::string> dayOfWeekValues = model::YearDescription::validDayofWeekforStartDayValues();
-  for (const auto dayOfWeekValue : dayOfWeekValues) {
+  for (const auto& dayOfWeekValue : dayOfWeekValues) {
     m_firstDayOfYearEdit->addItem(QString::fromStdString(dayOfWeekValue));
   }
   connect(m_firstDayOfYearEdit, static_cast<void (OSComboBox2::*)(const QString&)>(&OSComboBox2::currentTextChanged), this,
