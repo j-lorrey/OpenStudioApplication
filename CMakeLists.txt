@@ -418,6 +418,9 @@ if(MSVC)
 
     # QXmlDefaultHandler, QXmlInputSource, QXmlSimpleReader, QXmlParseException
     add_definitions(-Wno-deprecated-declarations)
+
+    # Add XRay instrumentation, not supported on Windows
+    #add_definitions(/clang:-fxray-instrument)
   endif()
 
 endif()
