@@ -120,6 +120,8 @@ IconLibrary::IconLibrary() {
   m_icons[openstudio::IddObjectType(openstudio::IddObjectType::OS_Chiller_Absorption_Indirect).value()] =
     new QPixmap(":images/chiller_absorption_indirect.png");
   m_icons[openstudio::IddObjectType(openstudio::IddObjectType::OS_Chiller_Absorption).value()] = new QPixmap(":images/chiller_absorption_direct.png");
+  m_icons[openstudio::IddObjectType(openstudio::IddObjectType::OS_Coil_Cooling_DX).value()] =
+    new QPixmap(":images/cool_coil_dx_vari_speed.png");
   m_icons[openstudio::IddObjectType(openstudio::IddObjectType::OS_Coil_Cooling_DX_SingleSpeed).value()] =
     new QPixmap(":images/dxcoolingcoil_singlespeed.png");
   m_icons[openstudio::IddObjectType(openstudio::IddObjectType::OS_Coil_Cooling_DX_TwoSpeed).value()] =
@@ -565,6 +567,8 @@ IconLibrary::IconLibrary() {
     new QPixmap(":images/mini_icons/coilheatingfourpipebeam.png");
   m_miniIcons[openstudio::IddObjectType(openstudio::IddObjectType::OS_Coil_Heating_Desuperheater).value()] =
     new QPixmap(":images/mini_icons/coilheatingdesuperheater.png");
+  m_miniIcons[openstudio::IddObjectType(openstudio::IddObjectType::OS_Coil_Cooling_DX).value()] =
+    new QPixmap(":images/mini_icons/mini_cool_coil_dx_vari_speed.png");
   m_miniIcons[openstudio::IddObjectType(openstudio::IddObjectType::OS_Coil_Cooling_DX_SingleSpeed).value()] =
     new QPixmap(":images/mini_icons/mini_dxcoolingcoil_singlespeed.png");
   m_miniIcons[openstudio::IddObjectType(openstudio::IddObjectType::OS_Coil_Cooling_DX_TwoSpeed).value()] =
