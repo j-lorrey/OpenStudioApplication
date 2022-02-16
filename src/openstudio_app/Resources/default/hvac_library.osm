@@ -13132,3 +13132,62 @@ OS:Curve:Quadratic,
   0.5,                                    !- Minimum Value of x
   1.5;                                    !- Maximum Value of x
 
+OS:Coil:Cooling:DX:CurveFit:Speed,
+  {6d1b9ee7-61db-424f-ac10-e2bae4f962b0}, !- Handle
+  Coil Cooling DX Curve Fit Speed 1,      !- Name
+  1,                                      !- Gross Total Cooling Capacity Fraction
+  1,                                      !- Evaporator Air Flow Rate Fraction
+  1,                                      !- Condenser Air Flow Rate Fraction
+  autosize,                               !- Gross Sensible Heat Ratio
+  3,                                      !- Gross Cooling COP {W/W}
+  1,                                      !- Active Fraction of Coil Face Area
+  773.3,                                  !- Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
+  1,                                      !- Evaporative Condenser Pump Power Fraction
+  0.9,                                    !- Evaporative Condenser Effectiveness {dimensionless}
+  ,                                       !- Total Cooling Capacity Modifier Function of Temperature Curve
+  ,                                       !- Total Cooling Capacity Modifier Function of Air Flow Fraction Curve
+  ,                                       !- Energy Input Ratio Modifier Function of Temperature Curve
+  ,                                       !- Energy Input Ratio Modifier Function of Air Flow Fraction Curve
+  ,                                       !- Part Load Fraction Correlation Curve
+  0.2;                                    !- Rated Waste Heat Fraction of Power Input {dimensionless}
+
+OS:Coil:Cooling:DX:CurveFit:OperatingMode,
+  {98f5ca69-fefa-427f-b73e-49dfb3782dba}, !- Handle
+  Coil Cooling DX Curve Fit Operating Mode 1, !- Name
+  autosize,                               !- Rated Gross Total Cooling Capacity {W}
+  autosize,                               !- Rated Evaporator Air Flow Rate {m3/s}
+  autosize,                               !- Rated Condenser Air Flow Rate {m3/s}
+  0,                                      !- Maximum Cycling Rate {cycles/hr}
+  0,                                      !- Ratio of Initial Moisture Evaporation Rate and Steady State Latent Capacity {dimensionless}
+  0,                                      !- Latent Capacity Time Constant {s}
+  0,                                      !- Nominal Time for Condensate Removal to Begin {s}
+  No,                                     !- Apply Latent Degradation to Speeds Greater than 1
+  AirCooled,                              !- Condenser Type
+  autosize,                               !- Nominal Evaporative Condenser Pump Power {W}
+  ;                                       !- Nominal Speed Number
+
+OS:Coil:Cooling:DX:CurveFit:Performance,
+  {2670cb82-3665-4fe3-a70c-801b2fc287fc}, !- Handle
+  Coil Cooling DX Curve Fit Performance 1, !- Name
+  0,                                      !- Crankcase Heater Capacity {W}
+  -25,                                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
+  10,                                     !- Maximum Outdoor Dry-Bulb Temperature for Crankcase Heater Operation {C}
+  773.3,                                  !- Unit Internal Static Air Pressure {Pa}
+  Discrete,                               !- Capacity Control Method
+  0,                                      !- Evaporative Condenser Basin Heater Capacity {W/K}
+  2,                                      !- Evaporative Condenser Basin Heater Setpoint Temperature {C}
+  {1540674d-a780-43fe-a8dd-b0b23e85b39e}, !- Evaporative Condenser Basin Heater Operating Schedule
+  Electricity,                            !- Compressor Fuel Type
+  {98f5ca69-fefa-427f-b73e-49dfb3782dba}; !- Base Operating Mode
+
+OS:Coil:Cooling:DX,
+  {bdfd8d32-f9fb-4318-8ab3-a7e3a88b1720}, !- Handle
+  Coil Cooling DX 1,                      !- Name
+  ,                                       !- Evaporator Inlet Node
+  ,                                       !- Evaporator Outlet Node
+  {1540674d-a780-43fe-a8dd-b0b23e85b39e}, !- Availability Schedule
+  ,                                       !- Condenser Zone
+  ,                                       !- Condenser Inlet Node Name
+  ,                                       !- Condenser Outlet Node Name
+  {2670cb82-3665-4fe3-a70c-801b2fc287fc}; !- Performance Object
+
