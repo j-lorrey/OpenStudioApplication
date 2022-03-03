@@ -13132,3 +13132,13 @@ OS:Curve:Quadratic,
   0.5,                                    !- Minimum Value of x
   1.5;                                    !- Maximum Value of x
 
+OS:Coil:Heating:Desuperheater,
+  {2f69c474-8d57-4a7e-979e-9c7534f41239}, !- Handle
+  Coil Heating Desuperheater 1,           !- Name
+  ,                                       !- Availability Schedule Name
+  0.8,                                    !- Heat Reclaim Recovery Efficiency
+  ,                                       !- Air Inlet Node Name
+  ,                                       !- Air Outlet Node Name
+  ,                                       !- Heating Source Name
+  0;                                      !- Parasitic Electric Load {W}
+

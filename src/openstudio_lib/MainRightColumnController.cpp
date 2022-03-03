@@ -1115,6 +1115,7 @@ void MainRightColumnController::configureForHVACSystemsSubTab(int subTabID) {
   libraryWidget->addModelObjectType(IddObjectType::OS_Chiller_Absorption_Indirect, "Chiller - Indirect Absorption");
   libraryWidget->addModelObjectType(IddObjectType::OS_Chiller_Absorption, "Chiller - Absorption");
   libraryWidget->addModelObjectType(IddObjectType::OS_Coil_Heating_Gas, "Coil Heating Gas");
+  libraryWidget->addModelObjectType(IddObjectType::OS_Coil_Heating_Desuperheater, "Coil Heating Desuperheater");
   libraryWidget->addModelObjectType(IddObjectType::OS_Coil_Heating_DX_SingleSpeed, "Coil Heating DX SingleSpeed");
   libraryWidget->addModelObjectType(IddObjectType::OS_Coil_Heating_Electric, "Coil Heating Electric");
   libraryWidget->addModelObjectType(IddObjectType::OS_Coil_Heating_Water, "Coil Heating Water");
